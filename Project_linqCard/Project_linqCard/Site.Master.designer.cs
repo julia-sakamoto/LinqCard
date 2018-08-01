@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinalProject_HomePage {
+namespace Project_linqCard {
     
     
     public partial class Site {

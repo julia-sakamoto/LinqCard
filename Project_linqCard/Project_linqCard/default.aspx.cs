@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace FinalProject_HomePage
+namespace Project_linqCard
 {
     public partial class _default : System.Web.UI.Page
     {

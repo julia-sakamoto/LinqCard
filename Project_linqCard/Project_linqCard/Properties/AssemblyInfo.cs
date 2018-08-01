@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FinalProject_HomePage")]
+[assembly: AssemblyTitle("Project_linqCard")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FinalProject_HomePage")]
+[assembly: AssemblyProduct("Project_linqCard")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("65cf6e60-2dfa-4202-9159-1720acefb108")]
+[assembly: Guid("3d3573c0-0756-472e-94ce-9eda69252f87")]
 
 // Version information for an assembly consists of the following four values:
 //
