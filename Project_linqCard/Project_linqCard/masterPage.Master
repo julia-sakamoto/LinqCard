@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Project_linqcard.masterPage" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+        .auto-style3 {
+            height: 600px;
+			width:600px;
+        }
+
+        .auto-style2 {
+    		height:83px;
+		}
+
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+			<tr >
+				<td colspan="2"  class="auto-style2" style="background-color: #808080" >
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<br />
+					<br />
+					<br />
+					<br />
+&nbsp;<asp:Button ID="Home" runat="server" OnClick="Button1_Click" Text="Home" />
+				&nbsp;<asp:Button ID="faq" runat="server" Text="FAQ" />
+&nbsp;<asp:Button ID="about" runat="server" Text="About" />
+				</td>
+			</tr>
+            <tr>
+                <td class="auto-style3">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            </table>
+
+    </form>
+</body>
+</html>
