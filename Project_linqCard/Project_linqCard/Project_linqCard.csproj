@@ -71,6 +71,11 @@
     <Content Include="company.aspx" />
     <Content Include="css\main.css" />
     <Content Include="default.aspx" />
+    <Content Include="img\hp_consulting.jpg" />
+    <Content Include="img\hp_finance.jpg" />
+    <Content Include="img\hp_it.jpg" />
+    <Content Include="img\hp_medical.jpg" />
+    <Content Include="img\hp_sales.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,9 +113,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

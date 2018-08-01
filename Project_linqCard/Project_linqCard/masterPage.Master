@@ -1,6 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Project_linqcard.masterPage" %>
 
-
 <!DOCTYPE html>
 
 <html>

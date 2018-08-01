@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_linqCard {
+namespace Project_linqcard {
     
     
     public partial class _default {
