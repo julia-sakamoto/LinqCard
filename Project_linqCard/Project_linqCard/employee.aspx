@@ -9,6 +9,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="Label1" runat="server" Text="Department"></asp:Label>
+            <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="DepartmentName" DataValueField="DepartmentName">
+            </asp:CheckBoxList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LinqCardDBConnectionString %>" SelectCommand="SELECT [DepartmentName] FROM [Department]"></asp:SqlDataSource>
+            <asp:Button ID="Button1" runat="server" Text="Submit" />
         </div>
     </form>
 </body>
