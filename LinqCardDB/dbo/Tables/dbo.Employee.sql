@@ -5,7 +5,7 @@
     [DepartmentId] VARCHAR (50) NOT NULL,
     [PhoneNumber]  VARCHAR (50) NOT NULL,
     [Hired ]       BIT          NULL,
-    [Address]      VARCHAR (50) NOT NULL,
+    [Address]      VARCHAR (MAX) NOT NULL,
     [StartDate]    DATE         NOT NULL,
     [EndDate]      DATE         NULL,
     [CompanyId]    CHAR (6)     NOT NULL,
