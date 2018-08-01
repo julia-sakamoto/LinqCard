@@ -1,5 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Project_linqcard.masterPage" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Project_linqCard.masterPage" %>
+<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Project_linqcard.masterPage" %>--%>
 <!DOCTYPE html>
 
 <html>
@@ -30,7 +30,7 @@
 					<br />
 					<br />
 					<br />
-&nbsp;<asp:Button ID="Home" runat="server" OnClick="Button1_Click" Text="Home" />
+&nbsp;<asp:Button ID="Home" runat="server"  Text="Home" />
 				&nbsp;<asp:Button ID="faq" runat="server" Text="FAQ" />
 &nbsp;<asp:Button ID="about" runat="server" Text="About" />
 				</td>

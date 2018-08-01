@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/masterPage.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Project_linqcard._default" %> 
+﻿<%@ Page Language="C#" MasterPageFile="~/masterPage.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Project_linqCard._default" %>
+
+<%--<%@ Page Language="C#" MasterPageFile="~/masterPage.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Project_linqcard._default" %>--%> 
  
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
     <link rel="Stylesheet" href="/css/main.css" type="text/css" /> 

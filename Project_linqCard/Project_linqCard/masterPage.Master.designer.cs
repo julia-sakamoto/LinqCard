@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_linqcard {
+namespace Project_linqCard {
     
     
     public partial class masterPage {
