@@ -34,7 +34,7 @@
 						<p>LinqCard</p>
 						<p>Business Card Management System</p>
 						<div style="display:flex;justify-content:flex-end">
-						<asp:Button style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button1" runat="server" Text="HOME" />
+						<asp:Button style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button1" runat="server" Text="HOME" OnClick="Button1_Click" />
                         <asp:Button  style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button2" runat="server" Text="FAQ" />
                         <asp:Button  style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button3" runat="server" Text="ABOUT" />
 					</div>
