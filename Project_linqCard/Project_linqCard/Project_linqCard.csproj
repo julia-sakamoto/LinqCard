@@ -68,7 +68,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="businessCard.aspx" />
     <Content Include="company.aspx" />
+    <Content Include="css\card.css" />
     <Content Include="css\main.css" />
     <Content Include="default.aspx" />
     <Content Include="img\hp_consulting.jpg" />
@@ -80,6 +82,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessLayer.cs" />
+    <Compile Include="businessCard.aspx.cs">
+      <DependentUpon>businessCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="businessCard.aspx.designer.cs">
+      <DependentUpon>businessCard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="company.aspx.cs">
       <DependentUpon>company.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -26,6 +26,16 @@ namespace Project_linqcard
         public string ceoName { get; set; }
     }
 
+    public class BusinessCard
+    {
+        public string employerID { get; set; }
+        public string name { get; set; }
+        public string jobTitle { get; set; }
+        public string phoneNumber { get; set; }
+        public string address { get; set; }
+        public string email { get; set; }
+    }
+
 
     public class AccessLayer
     {
@@ -55,6 +65,34 @@ namespace Project_linqcard
 
             return listCompany;
         }
+
+        public static List<BusinessCard> getBusinessCards(string companyName)
+        {
+            List<BusinessCard> listCards = new List<BusinessCard>();
+            //todo modify webconfig
+            string cs = ConfigurationManager.ConnectionStrings["LinqConnectionString"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                SqlCommand cmd = new SqlCommand("select * from Employer where companyType='" + companyName + "'", con);
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    BusinessCard obj = new BusinessCard();
+                    obj.employerID = rdr["CompanyId"].ToString();
+                    obj.name = rdr["CompanyWebsite"].ToString();
+                    obj.address = rdr["CompanyInfo"].ToString();
+                    obj.email = rdr["CeoName"].ToString();
+                    obj.jobTitle = rdr["CompanyType"].ToString();
+                    obj.phoneNumber = rdr["CompanyName"].ToString();
+                    listCards.Add(obj);
+                }
+            }
+
+            return listCards;
+        }
+
 
         public static void addRecord(Student obj)
         {

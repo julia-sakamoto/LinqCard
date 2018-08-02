@@ -7,8 +7,12 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+	 <link rel="Stylesheet" href="/css/card.css" type="text/css" /> 
     <style type="text/css">
-        
+    	.auto-style1 {
+			width:100%;
+    	}
+
         .auto-style3 {
             height: 600px;
 			width:600px;
@@ -24,15 +28,19 @@
     <form id="form1" runat="server">
         <table class="auto-style1">
 			<tr >
-				<td colspan="2"  class="auto-style2" style="background-color: #808080" >
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<br />
-					<br />
-					<br />
-					<br />
-&nbsp;<asp:Button ID="Home" runat="server"  Text="Home" />
-				&nbsp;<asp:Button ID="faq" runat="server" Text="FAQ" />
-&nbsp;<asp:Button ID="about" runat="server" Text="About" />
+				<td colspan="2"  class="auto-style1"  >
+				<div class=" front">
+					<div class="personal-intro">
+						<p>LinqCard</p>
+						<p>Business Card Management System</p>
+						<div style="display:flex;justify-content:flex-end">
+						<asp:Button style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button1" runat="server" Text="HOME" />
+                        <asp:Button  style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button2" runat="server" Text="FAQ" />
+                        <asp:Button  style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button3" runat="server" Text="ABOUT" />
+					</div>
+					</div>
+					
+				</div>
 				</td>
 			</tr>
             <tr>
