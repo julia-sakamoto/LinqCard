@@ -5,7 +5,29 @@
 	height: 200px;
 	margin: 20px auto;
 	width: 350px;
+	
 }
+
+
+
+
+
+.container {
+	
+	backface-visibility: hidden;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+	.container:hover {
+		-webkit-filter: grayscale(100%);
+	}
+
+	
+
+
 
 .front {
 	grid-template-columns: repeat(12, 1fr);
@@ -57,6 +79,7 @@
 
 		.front .personal-intro p {
 			letter-spacing: 1px;
+			user-select:none
 		}
 
 			.front .personal-intro p:first-of-type {
@@ -95,6 +118,7 @@
 		.back .personal-info p {
 			font-size: 10px;
 			margin:0;
+			user-select:none;
 		}
 
 			.back .personal-info p:first-of-type {
