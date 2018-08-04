@@ -8,13 +8,6 @@ using System.Configuration;
 
 namespace Project_linqcard
 {
-    public class Student
-    {
-
-        public int Id { get; set; }
-        public string St_Name { get; set; }
-    }
-
 
     public class Company
     {
@@ -96,19 +89,22 @@ namespace Project_linqcard
         }
 
 
-        public static void addRecord(Student obj)
+        public static void addRecord(BusinessCard obj)
         {
             string cs = ConfigurationManager.ConnectionStrings["LinqConnectionString"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("insert into student values (@Id,@St_Name)", con);
+                SqlCommand cmd = new SqlCommand("insert into Employee (Name, JobTitle, PhoneNumber, Address, Email, CompanyId) values (@Name, @JobTitle, @PhoneNumber, @Address, @Email, @CompanyId)", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("Id", obj.Id);
-                cmd.Parameters.AddWithValue("St_Name", obj.St_Name);
+                cmd.Parameters.AddWithValue("Name", obj.name);
+                cmd.Parameters.AddWithValue("JobTitle", obj.jobTitle);
+                cmd.Parameters.AddWithValue("PhoneNumber", obj.phoneNumber);
+                cmd.Parameters.AddWithValue("Address", obj.address);
+                cmd.Parameters.AddWithValue("Email", obj.email);
+                cmd.Parameters.AddWithValue("CompanyId", obj.companyID);
 
                 cmd.ExecuteNonQuery();
-
             }
         }
 

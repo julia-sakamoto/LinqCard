@@ -11,13 +11,29 @@ namespace Project_linqcard
     {
 
         public List<BusinessCard> businessCards = new List<BusinessCard>();
+        public int companyID;
 
-        // public BusinessCard b;
+        public void insert_Click(object sender, EventArgs e)
+        {
+            var newBC = new BusinessCard();
+            newBC.name = newName.Text;
+            newBC.jobTitle = newTitle.Text;
+            newBC.address = newAddress.Text;
+            newBC.phoneNumber = newPhone.Text;
+            newBC.email = newEmail.Text;
+            newBC.companyID = companyID;
+
+            AccessLayer.addRecord(newBC);
+
+            insertModal.Attributes["style"] = "display:none";
+            Response.Redirect(Request.RawUrl);
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
 
-            int companyID = int.Parse(Request.QueryString["companyID"]);
+            companyID = int.Parse(Request.QueryString["companyID"]);
             /*BusinessCard c1 = new BusinessCard();
             c1.employerID = 1;
             c1.address = "123 duval drive";
@@ -119,6 +135,8 @@ namespace Project_linqcard
             Button button = (Button)sender;
             int i = int.Parse(button.ID);
 
+
+            id.Text = (businessCards[i].employerID - 1).ToString();
             name.Text = businessCards[i].name;
             title.Text = businessCards[i].jobTitle;
             phone.Text = businessCards[i].phoneNumber;
@@ -129,13 +147,14 @@ namespace Project_linqcard
 
         protected void close_Click(object sender, EventArgs e)
         {
+
             myModal.Attributes["style"] = "display:none";
         }
 
         protected void delete_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            int i = int.Parse(button.ID);
+            int i = int.Parse(id.Text);
 
             AccessLayer.deleteRecord(businessCards[i]);
 
@@ -149,7 +168,7 @@ namespace Project_linqcard
         {
 
             Button button = (Button)sender;
-            int i = int.Parse(button.ID);
+            int i = int.Parse(id.Text);
 
             var temp = businessCards[i];
 
@@ -172,6 +191,17 @@ namespace Project_linqcard
 
             Response.Redirect(Request.RawUrl);
 
+        }
+
+        protected void btnShowInsert_Click(object sender, EventArgs e)
+        {
+            insertModal.Attributes["style"] = "display:block";
+
+        }
+
+        protected void insertClose_Click(object sender, EventArgs e)
+        {
+            insertModal.Attributes["style"] = "display:none";
         }
     }
 }
