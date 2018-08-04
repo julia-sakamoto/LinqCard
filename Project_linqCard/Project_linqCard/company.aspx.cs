@@ -38,8 +38,6 @@ namespace Project_linqcard
 
 
 
-
-
             //Button[] buttons = new Button[companyList.Count];
             for (int i = 0; i < companyList.Count; i++)
             {
