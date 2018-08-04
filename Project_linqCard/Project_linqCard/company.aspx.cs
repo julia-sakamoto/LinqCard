@@ -47,7 +47,7 @@ namespace Project_linqcard
                 new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
                 cardDiv.ID = "card"+i;
                 cardDiv.Attributes["style"] = "margin:0 10px 0 10px";
-                cardDiv.Attributes.Add("onclick", "window.location='businessCard.aspx?companyName=" + companyList[i].companyName + "'");
+                cardDiv.Attributes.Add("onclick", "window.location='businessCard.aspx?companyID=" + companyList[i].companyID + "'");
 
                 cardDiv.InnerHtml = "<div class='companyContain'><div class='card front'><div class='blue'></div><div class='yellow'>" +
                     "</div><div class='pink'></div><div class='dots'></div><div class='personal-intro'>" +
@@ -65,7 +65,7 @@ namespace Project_linqcard
         {
             string v = e.CommandArgument.ToString();
 
-            //Response.Redirect("businessCard.aspx?companyName="+v, false);
+            //Response.Redirect("businessCard.aspx?companyID="+v, false);
         }
 
     }

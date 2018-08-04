@@ -28,6 +28,7 @@ namespace Project_linqcard
 
     public class BusinessCard
     {
+        public int companyID { get; set; }
         public int employerID { get; set; }
         public string name { get; set; }
         public string jobTitle { get; set; }
@@ -66,7 +67,7 @@ namespace Project_linqcard
             return listCompany;
         }
 
-        public static List<BusinessCard> getBusinessCards(string companyName)
+        public static List<BusinessCard> getBusinessCards(int companyID)
         {
             List<BusinessCard> listCards = new List<BusinessCard>();
             //todo modify webconfig
@@ -74,8 +75,7 @@ namespace Project_linqcard
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("select * from Employer", con);
-                //where companyName = '" + companyName + "'
+                SqlCommand cmd = new SqlCommand("select * from Employer where companyID = '" + companyID + "'", con);
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
