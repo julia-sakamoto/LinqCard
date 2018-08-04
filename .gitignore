@@ -8,6 +8,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+\Project_linqCard\Project_linqCard\Web.config
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
