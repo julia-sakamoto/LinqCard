@@ -1,0 +1,313 @@
+﻿.card {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	display: grid;
+	font-family: 'Trebuchet MS', sans-serif;
+	height: 200px;
+	margin: 20px auto;
+	width: 350px;
+	
+}
+
+
+
+
+
+.companyContain {
+	backface-visibility: hidden;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+	.companyContain:hover {
+		-webkit-filter: grayscale(100%);
+		cursor:pointer;
+	}
+
+
+button:hover {
+	cursor:pointer;s
+}
+
+
+	
+
+
+
+.front {
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+
+	.front .blue {
+		background-color: #4cc9c8;
+		grid-column: 8 / span 5;
+		grid-row: 1 / span 4;
+	}
+
+	.front .yellow {
+		background-color: #f1ef1c;
+		grid-column: 1 / span 7;
+		grid-row: 1 / span 4;
+	}
+
+	.front .pink {
+		background-color: #fa001a;
+		clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+		grid-row: 1 / span 3;
+		grid-column: 1 / span 11;
+		position: relative;
+		z-index: 2;
+	}
+
+	.front .dots {
+		background: radial-gradient(#fa001a 20%, transparent 19%), radial-gradient(#fa001a 20%, transparent 19%), transparent;
+		background-size: 6px 6px;
+		background-position: 0 0, 3px 3px;
+		grid-column: 1 / span 12;
+		grid-row: 3 / span 2;
+		margin: 0 0 15px 20px;
+		z-index: 1;
+	}
+
+	.front .personal-intro {
+		background: black;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		grid-column: 4 / span 6;
+		grid-row: 2 / span 2;
+		justify-content: center;
+		text-align: center;
+		z-index: 3;
+	}
+
+		.front .personal-intro p {
+			letter-spacing: 1px;
+			user-select:none;
+		}
+
+			.front .personal-intro p:first-of-type {
+				font-size: 18px;
+			}
+
+			.front .personal-intro p:last-of-type {
+				font-size: 8px;
+				margin-top: 5px;
+			}
+
+.back {
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+}
+
+	.back .yellow {
+		background-color: #f1ef1c;
+		grid-column: 1 / span 9;
+		grid-row: 1 / span 3;
+	}
+
+	.back .top.dots {
+		background: radial-gradient(#4cc9c8 20%, transparent 19%), radial-gradient(#4cc9c8 20%, transparent 19%), transparent;
+		background-size: 6px 6px;
+		background-position: 0 0, 3px 3px;
+		grid-column: 8 / span 6;
+		grid-row: 2 / span 3;
+	}
+
+	.back .personal-info {
+		grid-column: 2 / span 6;
+		grid-row: 5 / span 6;
+	}
+
+		.back .personal-info p {
+			font-size: 10px;
+			margin:0;
+			user-select:none;
+		}
+
+			.back .personal-info p:first-of-type {
+				font-size: 18px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+
+			.back .personal-info p:nth-of-type(2) {
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+
+		.back .personal-info input {
+			font-size: 10px;
+			margin: 0;
+		}
+
+			.back .personal-info input:first-of-type {
+				font-size: 18px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+
+			.back .personal-info input:nth-of-type(2) {
+				font-size: 12px;
+			}
+
+	.back .bottom.dots {
+		background: radial-gradient(#4cc9c8 20%, transparent 19%), radial-gradient(#4cc9c8 20%, transparent 19%), transparent;
+		background-size: 6px 6px;
+		background-position: 0 0, 3px 3px;
+		grid-column: 1 / span 8;
+		grid-row: 11 / span 2;
+		z-index: 2;
+	}
+
+	.back .pink {
+		background-color: #fa001a;
+		grid-column: 8 / span 5;
+		grid-row: 10 / span 3;
+	}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 99; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+	border-radius:5px;
+	position: fixed;
+	bottom: 50%;
+	margin-left: 25%;
+	margin-bottom: -15%;
+	background-color: #fefefe;
+	width: 50%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+.modal-header {
+	text-align: center;
+	padding: 2px 16px;
+	font-family: 'Trebuchet MS', sans-serif;
+	background-color: bisque;
+	color: Black;
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 2px 16px;
+	background-color: black;
+	color: white;
+}
+
+.modal-footer h3 {
+	display:flex;
+	justify-content:center;
+}
+
+h3 input {
+	margin-right: 10px;
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+input {
+	border-radius:4px;
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+	input:hover {
+		cursor:pointer;
+	}
+
+	input:focus {
+		outline:none;
+	}
+
+	#close:focus {
+		outline: none;
+	}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0
+	}
+
+	to {
+		bottom: 50%;
+		opacity: 1
+	}
+}
+
+@keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0
+	}
+
+	to {
+		bottom: 50%;
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
+}

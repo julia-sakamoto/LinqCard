@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Project_linqCard.masterPage" %>
+<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Project_linqcard.masterPage" %>--%>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+	 <link rel="Stylesheet" href="/css/card.css" type="text/css" /> 
+    <style type="text/css">
+    	.auto-style1 {
+			width:100%;
+    	}
+
+        .auto-style3 {
+            height: 600px;
+			width:600px;
+        }
+
+        .auto-style2 {
+    		height:83px;
+		}
+
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+			<tr >
+				<td colspan="2"  class="auto-style1"  >
+				<div class=" front">
+					<div class="personal-intro">
+						<p>LinqCard</p>
+						<p>Business Card Management System</p>
+						<div style="display:flex;justify-content:flex-end">
+						<asp:Button style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button1" runat="server" Text="HOME" OnClick="Button1_Click" />
+                        <asp:Button  style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button2" runat="server" Text="FAQ" />
+                        <asp:Button  style="background-color:darkgray;border-radius:3px;margin:0 5px 4px 5px" ID="Button3" runat="server" Text="ABOUT" />
+					</div>
+					</div>
+					
+				</div>
+				</td>
+			</tr>
+            <tr>
+                <td class="auto-style3">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            </table>
+
+    </form>
+</body>
+</html>
