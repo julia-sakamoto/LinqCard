@@ -17,6 +17,7 @@ namespace Project_linqcard
 
             companyList = AccessLayer.getCompanies(companyType);
 
+            /*
             Company c1 = new Company();
             c1.companyName = "avc";
             Company c3 = new Company();
@@ -33,7 +34,7 @@ namespace Project_linqcard
             companyList.Add(c3);
             companyList.Add(c4);
             companyList.Add(c5);
-            
+            */
 
 
 

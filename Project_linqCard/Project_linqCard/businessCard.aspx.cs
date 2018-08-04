@@ -17,7 +17,7 @@ namespace Project_linqcard
         {
 
 
-            int companyID =int.Parse( Request.QueryString["compnayID"]);
+            int companyID =int.Parse( Request.QueryString["companyID"]);
             /* BusinessCard c1 = new BusinessCard();
              c1.employerID = 1;
              c1.address = "123 duval drive";
