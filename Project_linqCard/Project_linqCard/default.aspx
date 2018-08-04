@@ -4,7 +4,7 @@
  
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
     <link rel="Stylesheet" href="/css/main.css" type="text/css" /> 
-    <div class="container"> 
+    <div class="container" > 
         <div class="deptContainer" dir="ltr"> 
             <asp:Label ID="Label1" runat="server" Text="Information Technology" class="label"></asp:Label><br /> 
             <asp:Image ID="Image1" runat="server" class="img" ImageUrl="~/img/hp_it.jpg" /> 

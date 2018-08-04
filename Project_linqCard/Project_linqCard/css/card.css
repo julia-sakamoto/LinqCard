@@ -22,7 +22,14 @@
 
 	.companyContain:hover {
 		-webkit-filter: grayscale(100%);
+		cursor:pointer;
 	}
+
+
+button:hover {
+	cursor:pointer;s
+}
+
 
 	
 
@@ -78,7 +85,7 @@
 
 		.front .personal-intro p {
 			letter-spacing: 1px;
-			user-select:none
+			user-select:none;
 		}
 
 			.front .personal-intro p:first-of-type {
@@ -132,6 +139,22 @@
 				margin-bottom: 10px;
 			}
 
+		.back .personal-info input {
+			font-size: 10px;
+			margin: 0;
+		}
+
+			.back .personal-info input:first-of-type {
+				font-size: 18px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+
+			.back .personal-info input:nth-of-type(2) {
+				font-size: 12px;
+			}
+
 	.back .bottom.dots {
 		background: radial-gradient(#4cc9c8 20%, transparent 19%), radial-gradient(#4cc9c8 20%, transparent 19%), transparent;
 		background-size: 6px 6px;
@@ -146,3 +169,145 @@
 		grid-column: 8 / span 5;
 		grid-row: 10 / span 3;
 	}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 99; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+	border-radius:5px;
+	position: fixed;
+	bottom: 50%;
+	margin-left: 25%;
+	margin-bottom: -15%;
+	background-color: #fefefe;
+	width: 50%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+.modal-header {
+	text-align: center;
+	padding: 2px 16px;
+	font-family: 'Trebuchet MS', sans-serif;
+	background-color: bisque;
+	color: Black;
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 2px 16px;
+	background-color: black;
+	color: white;
+}
+
+.modal-footer h3 {
+	display:flex;
+	justify-content:center;
+}
+
+h3 input {
+	margin-right: 10px;
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+input {
+	border-radius:4px;
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+	input:hover {
+		cursor:pointer;
+	}
+
+	input:focus {
+		outline:none;
+	}
+
+	#close:focus {
+		outline: none;
+	}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0
+	}
+
+	to {
+		bottom: 50%;
+		opacity: 1
+	}
+}
+
+@keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0
+	}
+
+	to {
+		bottom: 50%;
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
+}
