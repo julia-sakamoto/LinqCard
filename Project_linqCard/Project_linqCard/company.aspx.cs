@@ -13,9 +13,9 @@ namespace Project_linqcard
         public List<Company> companyList =new List<Company>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //String companyType = Request.QueryString["companyType"];
+            String companyType = Request.QueryString["companyType"];
 
-            //companyList = AccessLayer.getCompanies(companyType);
+            companyList = AccessLayer.getCompanies(companyType);
 
             Company c1 = new Company();
             c1.companyName = "avc";

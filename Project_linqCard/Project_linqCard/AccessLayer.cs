@@ -75,13 +75,13 @@ namespace Project_linqcard
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("select * from Employer where companyID = '" + companyID + "'", con);
+                SqlCommand cmd = new SqlCommand("select * from Employee where companyID = '" + companyID + "'", con);
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
                     BusinessCard obj = new BusinessCard();
-                    obj.employerID = Convert.ToInt32(rdr["employerID"]);
+                    obj.employerID = Convert.ToInt32(rdr["employeeID"]);
                     obj.name = rdr["name"].ToString();
                     obj.address = rdr["address"].ToString();
                     obj.email = rdr["email"].ToString();
@@ -118,7 +118,7 @@ namespace Project_linqcard
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("delete from Employer where employerID=@Id", con);
+                SqlCommand cmd = new SqlCommand("delete from Employee where employeeID=@Id", con);
                 con.Open();
                 cmd.Parameters.AddWithValue("Id", card.employerID);
                 cmd.ExecuteNonQuery();
@@ -132,8 +132,8 @@ namespace Project_linqcard
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("update Employer set name=@Name,address=@Address,phoneNumber=@phoneNumber," +
-                    "email=@email,jobTitle=@jobTitle where employerID=@Id", con);
+                SqlCommand cmd = new SqlCommand("update Employee set name=@Name,address=@Address,phoneNumber=@phoneNumber," +
+                    "email=@email,jobTitle=@jobTitle where employeeID=@Id", con);
                 con.Open();
                 cmd.Parameters.AddWithValue("Id", card.employerID);
                 cmd.Parameters.AddWithValue("Name", card.name);
