@@ -1,22 +1,23 @@
 ﻿body {
 }
 
-.deptContainer {
+.fieldContainer {
     display: inline-block;
     width: 300px;
     height: 230px;
     margin: 30px 30px;
-    background-color:beige;
+    background-color: beige;
     border: 0 none;
     border-radius: 5px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
     padding: 10px 10px;
     text-align: center;
 }
-.container{
-    display:flex;
-	justify-content:center;
-	flex-wrap:wrap;
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .img {
@@ -24,6 +25,7 @@
     height: 90%;
     margin: 10px auto;
 }
+
 .label {
     font-family: 'Segoe UI';
     color: black;

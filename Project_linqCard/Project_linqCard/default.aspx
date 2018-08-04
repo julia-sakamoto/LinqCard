@@ -5,23 +5,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
     <link rel="Stylesheet" href="/css/main.css" type="text/css" /> 
     <div class="container" > 
-        <div class="deptContainer" dir="ltr"> 
+        <div class="fieldContainer" runat="server" id="fieldContainer1"> 
             <asp:Label ID="Label1" runat="server" Text="Information Technology" class="label"></asp:Label><br /> 
             <asp:Image ID="Image1" runat="server" class="img" ImageUrl="~/img/hp_it.jpg" /> 
         </div> 
-        <div class="deptContainer"> 
+        <div class="fieldContainer" runat="server" id="fieldContainer2"> 
             <asp:Label ID="Label2" runat="server" Text="Medical" class="label"></asp:Label><br /> 
             <asp:Image ID="Image2" runat="server" class="img" ImageUrl="~/img/hp_medical.jpg" /> 
         </div> 
-        <div class="deptContainer"> 
+        <div class="fieldContainer" runat="server" id="fieldContainer3"> 
             <asp:Label ID="Label3" runat="server" Text="Financial Services" class="label"></asp:Label><br /> 
             <asp:Image ID="Image3" runat="server" class="img" ImageUrl="~/img/hp_finance.jpg" /> 
         </div> 
-        <div class="deptContainer"> 
+        <div class="fieldContainer" runat="server" id="fieldContainer4"> 
             <asp:Label ID="Label5" runat="server" Text="Sales" class="label"></asp:Label><br /> 
             <asp:Image ID="Image5" runat="server" class="img" ImageUrl="~/img/hp_sales.jpg" /> 
         </div> 
-        <div class="deptContainer"> 
+        <div class="fieldContainer" runat="server" id="fieldContainer5"> 
             <asp:Label ID="Label4" runat="server" Text="Consulting" class="label"></asp:Label><br /> 
             <asp:Image ID="Image4" runat="server" class="img" ImageUrl="~/img/hp_consulting.jpg" /> 
         </div> 
