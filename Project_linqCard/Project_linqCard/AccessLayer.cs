@@ -54,7 +54,7 @@ namespace Project_linqcard
                 while (rdr.Read())
                 {
                     Company obj = new Company();
-                    obj.companyID = Convert.ToInt32(rdr["CompanyId"]);
+                    obj.companyID = int.Parse(rdr["CompanyId"].ToString());
                     obj.companySite = rdr["CompanyWebsite"].ToString();
                     obj.companyInfo = rdr["CompanyInfo"].ToString();
                     obj.ceoName = rdr["CeoName"].ToString();
@@ -81,7 +81,11 @@ namespace Project_linqcard
                 while (rdr.Read())
                 {
                     BusinessCard obj = new BusinessCard();
+<<<<<<< Updated upstream
                     obj.employerID = Convert.ToInt32(rdr["employeeID"]);
+=======
+                    obj.employerID = int.Parse(rdr["employeeID"].ToString());
+>>>>>>> Stashed changes
                     obj.name = rdr["name"].ToString();
                     obj.address = rdr["address"].ToString();
                     obj.email = rdr["email"].ToString();
