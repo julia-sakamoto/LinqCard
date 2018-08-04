@@ -82,6 +82,7 @@ namespace Project_linqcard
                 {
                     BusinessCard obj = new BusinessCard();
                     obj.employerID = Convert.ToInt32(rdr["employeeID"]);
+
                     obj.name = rdr["name"].ToString();
                     obj.address = rdr["address"].ToString();
                     obj.email = rdr["email"].ToString();
