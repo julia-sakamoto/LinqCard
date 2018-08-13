@@ -12,6 +12,8 @@ namespace Project_linqcard
 
         public List<BusinessCard> businessCards = new List<BusinessCard>();
         public int companyID;
+        static int clickButtonID = 0;
+
 
         public void insert_Click(object sender, EventArgs e)
         {
@@ -92,7 +94,7 @@ namespace Project_linqcard
                 cardDiv.InnerHtml = "<div class='card back'><div class='yellow'></div><div class='top dots'>" +
                     "</div><div class='personal-info'><p>" + businessCards[i].name + "</p><p>" + businessCards[i].jobTitle + "</p>" +
                     "<p>" + businessCards[i].address + "</p><p>Sacramento, CA 14234</p><p>" + businessCards[i].phoneNumber + "</p>" +
-                    "<p>" + businessCards[i].email + "</p><p>@kristastone</p></div><div class='bottom dots'>" +
+                    "<p>" + businessCards[i].email + "</p></div><div class='bottom dots'>" +
                     "</div><div class='pink'></div></div>";
 
                 System.Web.UI.HtmlControls.HtmlGenericControl buttonContainer =
@@ -129,14 +131,17 @@ namespace Project_linqcard
         }
 
 
+       
 
         public void ShowModal(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             int i = int.Parse(button.ID);
+            clickButtonID = i;
 
+            System.Diagnostics.Debug.WriteLine(clickButtonID);
 
-            id.Text = (businessCards[i].employerID - 1).ToString();
+            id.Text = (businessCards[i].employerID-1).ToString();
             name.Text = businessCards[i].name;
             title.Text = businessCards[i].jobTitle;
             phone.Text = businessCards[i].phoneNumber;
@@ -154,9 +159,9 @@ namespace Project_linqcard
         protected void delete_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            int i = int.Parse(id.Text);
+            //int i = int.Parse(id.Text);
 
-            AccessLayer.deleteRecord(businessCards[i]);
+            AccessLayer.deleteRecord(businessCards[clickButtonID]);
 
             myModal.Attributes["style"] = "display:none";
 
@@ -165,13 +170,10 @@ namespace Project_linqcard
         }
 
         protected void update_Click(object sender, EventArgs e)
-        {
+        {            
 
-            Button button = (Button)sender;
-            int i = int.Parse(id.Text);
-
-            var temp = businessCards[i];
-
+            var temp = businessCards[clickButtonID];
+            System.Diagnostics.Debug.WriteLine(clickButtonID);
             String ename = name.Text;
             String eaddress = address.Text;
             String ephone = phone.Text;
@@ -195,6 +197,7 @@ namespace Project_linqcard
 
         protected void btnShowInsert_Click(object sender, EventArgs e)
         {
+            
             insertModal.Attributes["style"] = "display:block";
 
         }
